@@ -23,6 +23,7 @@ const initialState={
 export const reducer=( state=initialState, action)=>{
   switch(action.type){  
     case(ADD_FEATURE):
+      console.log("This is the newFeature"+newFeature)
       const newFeature=state.additionalFeatures[action.payload-1]
       return({
         ...state, car:{...state.car, features:[...state.car.features,newFeature]}, additionalPrice: newFeature.price+ state.additionalPrice
